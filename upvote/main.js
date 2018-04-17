@@ -1,3 +1,7 @@
+const submissionComponent = {
+
+};
+
 new Vue({
   el: '#app',
   data: {
