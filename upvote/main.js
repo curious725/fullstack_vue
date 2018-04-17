@@ -53,5 +53,8 @@ new Vue({
       );
       submission.votes++;
     }
+  },
+  components: {
+    'submission-component': submissionComponent
   }
 });
