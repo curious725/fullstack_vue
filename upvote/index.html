@@ -18,23 +18,23 @@
       <article v-for="submission in submissions" v-bind:key="submission.id"
         class="media">
         <figure class="media-left">
-          <img v-bind:src="submissions[0].submissionImage" class="image is-64x64">
+          <img v-bind:src="submission.submissionImage" class="image is-64x64">
         </figure>
         <div class="media-content">
           <div class="content">
             <p>
               <strong>
-                <a v-bind:href="submissions[0].url" class="has-text-info">
-                  {{ submissions[0].title }}
+                <a v-bind:href="submission.url" class="has-text-info">
+                  {{ submission.title }}
                 </a>
-                <span class="tag is-small">#{{ submissions[0].id }}</span>
+                <span class="tag is-small">#{{ submission.id }}</span>
               </strong>
               <br>
-                {{ submissions[0].description }}
+                {{ submission.description }}
               <br>
               <small class="is-size-7">
                 Submitted by:
-                <img v-bind:src="submissions[0].avatar" alt="" class="image is-24x24">
+                <img v-bind:src="submission.avatar" alt="" class="image is-24x24">
               </small>
             </p>
           </div>
@@ -42,7 +42,7 @@
         <div class="media-right">
           <span class="icon is-small">
             <i class="fa fa-chevron-up">
-            <strong class="has-text-info">{{ submissions[0].votes }}</strong>
+            <strong class="has-text-info">{{ submission.votes }}</strong>
             </i>
           </span>
         </div>
