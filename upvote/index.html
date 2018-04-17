@@ -15,7 +15,7 @@
     <h2 class="title has-text-centered dividing-header">Upvote!</h2>
 
     <div class="section">
-      <article class="media">
+      <article v-for="submission in submissions" class="media">
         <figure class="media-left">
           <img v-bind:src="submissions[0].submissionImage" class="image is-64x64">
         </figure>
