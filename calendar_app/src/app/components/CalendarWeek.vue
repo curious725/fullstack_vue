@@ -67,7 +67,12 @@
 import { store } from '../store.js';
 
 export default {
-  name: 'CalendarWeek'
+  name: 'CalendarWeek',
+  data() {
+    return {
+      sharedState: store.state
+    }
+  }
 }
 </script>
 
