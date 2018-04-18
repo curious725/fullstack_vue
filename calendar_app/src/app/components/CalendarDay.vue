@@ -3,6 +3,10 @@
     <div class="day-banner has-text-centered">{{ day.abbvTitle }}</div>
     <div class="day-details">
       <div class="day-number">{{ day.id }}</div>
+      <CalendarEvent v-for="event in day.events"
+        :key="day.events.indexOf(event)"
+        :event="event"
+        :day="day" />
       <div class="day-event" style="background-color: rgb(153, 255, 153)">
         <div>
           <span class="has-text-centered details">Get Groceries</span> 
