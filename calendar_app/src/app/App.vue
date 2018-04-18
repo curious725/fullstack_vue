@@ -1,5 +1,7 @@
 <template>
   <div id="app">
+    <CalendarWeek />
+    <CalendarEntry />
   </div>
 </template>
 
@@ -8,7 +10,11 @@ import CalendarWeek from './components/CalendarWeek.vue'
 import CalendarEntry from './components/CalendarEntry.vue'
 
 export default {
-  name: 'App'
+  name: 'App',
+  components: {
+    CalendarWeek,
+    CalendarEntry
+  }
 }
 </script>
 
