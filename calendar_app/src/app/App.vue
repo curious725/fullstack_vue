@@ -1,13 +1,12 @@
 <template>
   <div id="app">
-
   </div>
 </template>
 
 <script>
-  export default {
-    name: 'App'
-  }
+export default {
+  name: 'App'
+}
 </script>
 
 <style lang="scss">
@@ -25,8 +24,4 @@ html, body {
   justify-content: center;
   -webkit-justify-content: center;
 }
-
-
-
-
 </style>
