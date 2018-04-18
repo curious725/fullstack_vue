@@ -21,7 +21,10 @@ import CalendarEvent from './CalendarEvent.vue'
 
 export default {
   name: 'CalendarDay',
-  props: ['day']
+  props: ['day'],
+  components: {
+    CalendarEvent
+  }
 }
 </script>
 
