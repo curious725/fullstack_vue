@@ -12,6 +12,7 @@
 </template>
 
 <script>
+import { store } from '../store.js'
 import CalendarEvent from './CalendarEvent.vue'
 
 export default {
@@ -19,6 +20,11 @@ export default {
   props: ['day'],
   components: {
     CalendarEvent
+  },
+  methods: {
+    setActiveDay(dayId) {
+      store.setActiveDay(dayId);
+    }
   }
 }
 </script>
