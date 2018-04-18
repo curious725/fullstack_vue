@@ -22,7 +22,9 @@ export default {
 html, body {
   height: 100%;
 }
+</style>
 
+<style lang="scss" scoped>
 #app {
   height: inherit;
   background: #6e6e6e;
