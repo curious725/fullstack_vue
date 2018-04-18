@@ -65,6 +65,7 @@
 
 <script>
 import { store } from '../store.js';
+import CalendarDay from './CalendarDay.vue'
 
 export default {
   name: 'CalendarWeek',
