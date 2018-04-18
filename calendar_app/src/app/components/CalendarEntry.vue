@@ -9,8 +9,15 @@
 </template>
 
 <script>
+import { store } from '../store.js'
+
 export default {
-  name: 'CalendarEntry'
+  name: 'CalendarEntry',
+  computed: {
+    titleOfActiveDay() {
+      return store.getActiveDay().fullTitle;
+    }
+  }
 }
 </script>
 
