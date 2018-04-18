@@ -13,7 +13,14 @@
 <script>
 export default {
   name: 'CalendarEvent',
-  props: ['event', 'day']
+  props: ['event', 'day'],
+  computed: {
+    getEventBackgroundColor() {
+      const colors = ['#FF9999', '#85D6FF', '#99FF99'];
+      let randomColor = colors[Math.floor(Math.random() * colors.length)];
+      return `background-color: ${randomColor}`;
+    }
+  }
 }
 </script>
 
