@@ -73,6 +73,9 @@ export default {
     return {
       sharedState: store.state
     }
+  },
+  components: {
+    CalendarDay
   }
 }
 </script>
