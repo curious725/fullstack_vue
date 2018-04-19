@@ -34,6 +34,7 @@ export default {
   },
   methods: {
     submitEvent(eventDetails) {
+      if (eventDetails === '') return this.error=true;
       store.submitEvent(eventDetails);
       this.inputEntry = '';
     }
