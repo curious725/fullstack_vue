@@ -27,6 +27,11 @@ export default {
     titleOfActiveDay() {
       return store.getActiveDay().fullTitle;
     }
+  },
+  methods: {
+    submitEvent(eventDetails) {
+      store.submitEvent(eventDetails);
+    }
   }
 }
 </script>
