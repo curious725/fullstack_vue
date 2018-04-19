@@ -10,6 +10,9 @@
         Submit
     </a>
   </div>
+  <p style="color: red; font-size: 13px" v-if="error">
+    You must type something first!
+  </p>
 </div>
 </template>
 
