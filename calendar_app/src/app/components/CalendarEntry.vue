@@ -5,7 +5,10 @@
     <p class="calendar-entry-day">Day of event: 
       <span class="bold">{{ titleOfActiveDay }}</span>
     </p>
-    <a class="button is-primary is-small is-outlined">Submit</a>
+    <a class="button is-primary is-small is-outlined"
+      @click="submitEvent(inputEntry)">
+        Submit
+    </a>
   </div>
 </div>
 </template>
