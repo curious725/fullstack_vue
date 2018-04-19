@@ -15,6 +15,11 @@ import { store } from '../store.js'
 
 export default {
   name: 'CalendarEntry',
+  data() {
+    return {
+      inputEntry: '',
+    }
+  },
   computed: {
     titleOfActiveDay() {
       return store.getActiveDay().fullTitle;
