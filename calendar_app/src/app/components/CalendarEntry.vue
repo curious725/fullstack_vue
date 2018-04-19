@@ -31,6 +31,7 @@ export default {
   methods: {
     submitEvent(eventDetails) {
       store.submitEvent(eventDetails);
+      this.inputEntry = '';
     }
   }
 }
