@@ -2,7 +2,7 @@
 <div id="calendar-entry">
   <div class="calendar-entry-note">
     <input type="text" placeholder="New Event" v-model="inputEntry" required />
-    <p class="calendar-entry-day">Day of event: 
+    <p class="calendar-entry-day">Day of event:
       <span class="bold">{{ titleOfActiveDay }}</span>
     </p>
     <a class="button is-primary is-small is-outlined"
@@ -37,6 +37,7 @@ export default {
       if (eventDetails === '') return this.error=true;
       store.submitEvent(eventDetails);
       this.inputEntry = '';
+      this.error = false;
     }
   }
 }
