@@ -27,6 +27,20 @@ export const store = {
     );
     eventObj.edit = true;
   },
+  updateEvent(dayId, originalEventDetails, newEventDetails) {
+    // Find the day object
+    const dayObj = this.state.seedData.find(
+      day => day.id === dayId
+    );
+    // Find the specific event
+    const eventObj = dayObj.events.find(
+      event => event.details === originalEventDetails
+    );
+    // Set the event details to the new details
+    // adn turn off editing
+    eventObj.details = newEventDetails;
+    eventObj.edit = false;
+  },
   resetEditOfAllEvents() {
     this.state.seedData.map((dayObj) => {
       dayObj.events.map((event) => {
