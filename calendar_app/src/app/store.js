@@ -19,23 +19,11 @@ export const store = {
   },
   editEvent(dayId, eventDetails) {
     this.resetEditOfAllEvents();
-    const dayObj = this.state.seedData.find(
-      day => day.id === dayId
-    );
-    const eventObj = dayObj.events.find(
-      event => event.details === eventDetails
-    );
+    const eventObj = this.getEventObj(dayId, eventDetails);
     eventObj.edit = true;
   },
   updateEvent(dayId, originalEventDetails, newEventDetails) {
-    // Find the day object
-    const dayObj = this.state.seedData.find(
-      day => day.id === dayId
-    );
-    // Find the specific event
-    const eventObj = dayObj.events.find(
-      event => event.details === originalEventDetails
-    );
+    const eventObj = this.getEventObj(dayId, originalEventDetails);
     // Set the event details to the new details
     // adn turn off editing
     eventObj.details = newEventDetails;
