@@ -46,6 +46,9 @@ export default {
       if (updatedEventDetails === '') updatedEventDetails = originalEventDetails;
       store.updateEvent(dayId, originalEventDetails, updatedEventDetails);
       this.newEventDetails = '';
+    },
+    deleteEvent(dayId, eventDetails) {
+      store.deleteEvent(dayId, eventDetails);
     }
   }
 }
