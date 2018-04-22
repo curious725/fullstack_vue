@@ -18,6 +18,8 @@
 </template>
 
 <script>
+import { store } from '../store.js';
+
 export default {
   name: 'CalendarEvent',
   props: ['event', 'day'],
@@ -26,6 +28,11 @@ export default {
       const colors = ['#FF9999', '#85D6FF', '#99FF99'];
       let randomColor = colors[Math.floor(Math.random() * colors.length)];
       return `background-color: ${randomColor}`;
+    }
+  },
+  methods: {
+    editEvent(dayId, eventDetails) {
+      store.editEvent(dayId, eventDetails);
     }
   }
 }
