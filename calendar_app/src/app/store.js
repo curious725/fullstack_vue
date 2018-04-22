@@ -25,5 +25,12 @@ export const store = {
       event => event.details === eventDetails
     );
     eventObj.edit = true;
+  },
+  resetEditOfAllEvents() {
+    this.state.seedData.map((dayObj) => {
+      dayObj.events.map((event) => {
+        event.edit = false;
+      })
+    })
   }
 }
