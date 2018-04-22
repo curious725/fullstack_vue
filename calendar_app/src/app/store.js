@@ -14,7 +14,16 @@ export const store = {
     });
   },
   submitEvent(eventDetails) {
-    const activeDay = this.getActiveDay();    
+    const activeDay = this.getActiveDay();
     activeDay.events.push({ "details": eventDetails, "edit": false });
+  },
+  editEvent(dayId, eventDetails) {
+    const dayObj = this.state.seedData.find(
+      day => day.id === dayId
+    );
+    const eventObj = dayObj.events.find(
+      event => event.details === eventDetails
+    );
+    eventObj.edit = true;
   }
 }
