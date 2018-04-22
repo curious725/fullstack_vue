@@ -24,6 +24,11 @@ import { store } from '../store.js';
 export default {
   name: 'CalendarEvent',
   props: ['event', 'day'],
+  data() {
+    return {
+      newEventDetails: ''
+    }
+  },
   computed: {
     getEventBackgroundColor() {
       const colors = ['#FF9999', '#85D6FF', '#99FF99'];
