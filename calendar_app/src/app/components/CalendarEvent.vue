@@ -39,6 +39,9 @@ export default {
   methods: {
     editEvent(dayId, eventDetails) {
       store.editEvent(dayId, eventDetails);
+    },
+    updateEvent(dayId, originalEventDetails, updatedEventDetails) {
+      store.updateEvent(dayId, originalEventDetails, updatedEventDetails);
     }
   }
 }
