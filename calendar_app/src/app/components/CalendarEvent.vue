@@ -43,6 +43,7 @@ export default {
     updateEvent(dayId, originalEventDetails, updatedEventDetails) {
       if (updatedEventDetails === '') updatedEventDetails = originalEventDetails;
       store.updateEvent(dayId, originalEventDetails, updatedEventDetails);
+      this.newEventDetails = '';
     }
   }
 }
