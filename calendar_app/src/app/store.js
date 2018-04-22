@@ -41,6 +41,14 @@ export const store = {
     eventObj.details = newEventDetails;
     eventObj.edit = false;
   },
+  getEventObj(dayId, eventDetails) {
+    const dayObj = this.state.seedData.find(
+      day => day.id === dayId
+    );
+    return dayObj.events.find(
+      event => event.details === eventDetails
+    );
+  },
   resetEditOfAllEvents() {
     this.state.seedData.map((dayObj) => {
       dayObj.events.map((event) => {
