@@ -18,6 +18,7 @@ export const store = {
     activeDay.events.push({ "details": eventDetails, "edit": false });
   },
   editEvent(dayId, eventDetails) {
+    this.resetEditOfAllEvents();
     const dayObj = this.state.seedData.find(
       day => day.id === dayId
     );
