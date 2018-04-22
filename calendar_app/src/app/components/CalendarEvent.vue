@@ -9,9 +9,10 @@
     </div>
   </div>
   <div v-if="event.edit">
-    <input type="text" :placeholder="event.details">
+    <input type="text" :placeholder="event.details" v-model="newEventDetails">
     <div class="has-text-centered icons">
-      <i class="fa fa-check"></i>
+      <i class="fa fa-check"
+        @click="updateEvent(day.id, event.details, newEventDetails)"></i>
     </div>
   </div>
 </div>
